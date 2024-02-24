@@ -115,6 +115,7 @@ function moduleProject2() {
       let elapsed = getTimeElapsed()
       document.querySelector("p.info").textContent = 
       "Extermination completed in ${elapsed / 1000}"
+      
     }
   }
 

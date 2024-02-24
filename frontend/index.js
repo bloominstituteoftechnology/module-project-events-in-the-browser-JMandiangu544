@@ -123,6 +123,7 @@ function moduleProject2() {
         location.reload()
       })
       document.querySelector('h2').insertAdjacentElement('beforeend', restartBtn)
+      restartBtn.focus()
     }
   }
   })

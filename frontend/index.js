@@ -115,7 +115,7 @@ function moduleProject2() {
     if (!liveMosquitoes.length) {
       let elapsed = getTimeElapsed()
       document.querySelector('p.info').textContent = 
-      `Extermination completed in ${elapsed / 1000} seconds`
+      `Extermination completed in ${elapsed / 1000} seconds!`
     }
   }
   })

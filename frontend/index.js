@@ -74,29 +74,29 @@ function moduleProject2() {
     let isLeft = evt.key === keys.left
     let isRight = evt.key === keys.right
 
-    let targeted = document.querySelector(".targeted")
+    let targeted = document.querySelector('.targeted')
 
     if (isUp) {
       if (targeted.parentElement.previousElementSibling) {
         let idx = Array.from(targeted.parentElement.children).indexOf(targeted)
-        targeted.classList.remove("targeted")
-        targeted.parentElement.previousElementSibling.children[idx].classList.add("targeted")
+        targeted.classList.remove('targeted')
+        targeted.parentElement.previousElementSibling.children[idx].classList.add('targeted')
       }
     } else if (isDown) {
       if (targeted.parentElement.nextElementSibling) {
         let idx = Array.from(targeted.parentElement.children).indexOf(targeted)
-        targeted.classList.remove("targeted")
-        targeted.parentElement.nextElementSibling.children[idx].classList.add("targeted")
+        targeted.classList.remove('targeted')
+        targeted.parentElement.nextElementSibling.children[idx].classList.add('targeted')
     }
   } else if (isLeft) {
     if (targeted.previousElementSibling) {
-      targeted.classList.remove("targeted")
-      targeted.previousElementSibling.classList.add("targeted")
+      targeted.classList.remove('targeted')
+      targeted.previousElementSibling.classList.add('targeted')
   }
 } else if (isRight) {
   if (targeted.nextElementSibling) {
     targeted.classList.remove("targeted")
-    targeted.nextElementSibling.classList.add("targeted")
+    targeted.nextElementSibling.classList.add('targeted')
   }
 }
 
@@ -104,21 +104,13 @@ function moduleProject2() {
     else if (isSpacebar) {
       let mosquito = targeted.firstChild
       
-      if (mosquito && mosquito.dataset.status === "alive") {
-        mosquito.dataset.status = "dead"
-        mosquito.parentElement.style.backgroundColor = "red"
+      if (mosquito && mosquito.dataset.status === 'alive') {
+        mosquito.dataset.status = 'dead'
+        mosquito.parentElement.style.backgroundColor = 'red'
       }
+    }
 
     // 👉 TASK 5 - End the game 👈
-    let liveMosquitoes = document.querySelectorAll("[data-status=alive]")
-    if (!liveMosquitoes.length) {
-      let elapsed = getTimeElapsed()
-      document.querySelector("p.info").textContent = 
-      "Extermination completed in ${elapsed / 1000}"
-      
-    }
-  }
-
   })
   // 👆 WORK WORK ABOVE THIS LINE 👆
 }

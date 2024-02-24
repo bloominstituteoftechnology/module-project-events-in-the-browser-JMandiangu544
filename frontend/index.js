@@ -106,11 +106,18 @@ function moduleProject2() {
       
       if (mosquito && mosquito.dataset.status === 'alive') {
         mosquito.dataset.status = 'dead'
-        mosquito.parentElement.style.backgroundColor = 'yellow'
+        mosquito.parentElement.style.backgroundColor = 'red'
       }
-    }
+    
 
     // 👉 TASK 5 - End the game 👈
+    let liveMosquitoes = document.querySelectorAll('[data-status=alive]')
+    if (!liveMosquitoes.length) {
+      let elapsed = getTimeElapsed()
+      document.querySelector('p.info').textContent = 
+      `Extermination completed in ${elapsed / 1000} seconds`
+    }
+  }
   })
   // 👆 WORK WORK ABOVE THIS LINE 👆
 }

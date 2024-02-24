@@ -106,7 +106,7 @@ function moduleProject2() {
       
       if (mosquito && mosquito.dataset.status === 'alive') {
         mosquito.dataset.status = 'dead'
-        mosquito.parentElement.style.backgroundColor = 'red'
+        mosquito.parentElement.style.backgroundColor = 'yellow'
       }
     }
 
